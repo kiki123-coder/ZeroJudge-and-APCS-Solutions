@@ -17,25 +17,25 @@ int main(void)
         if(M==1){
             while(top<=bottom && left<=right){
 
-                //©¹¥k
+                //å¾€å³
                 for(int i=left; i<=right; i++){
                     arr[top][i]=num;
                     num++;
                 }
 
-                //©¹¤U
+                //å¾€ä¸‹
                 for(int i=top+1; i<=bottom; i++){
                     arr[i][right]=num;
                     num++;
                 }
 
-                //©¹¥ª
+                //å¾€å·¦
                 for(int i=right-1; i>=left; i--){
                     arr[bottom][i]=num;
                     num++;
                 }
 
-                //©¹¤W
+                //å¾€ä¸Š
                 for(int i=bottom-1; i>top; i--){
                     arr[i][left]=num;
                     num++;
@@ -51,25 +51,25 @@ int main(void)
         else if(M==2){
             while(top<=bottom && left<=right){
 
-                //©¹¤U
+                //å¾€ä¸‹
                 for(int i=top; i<=bottom; i++){
                     arr[i][left]=num;
                     num++;
                 }
 
-                //©¹¥k
+                //å¾€å³
                 for(int i=left+1; i<=right; i++){
                     arr[bottom][i]=num;
                     num++;
                 }
 
-                //©¹¤W
+                //å¾€ä¸Š
                 for(int i=bottom-1; i>=top; i--){
                     arr[i][right]=num;
                     num++;
                 }
 
-                //©¹¥ª
+                //å¾€å·¦
                 for(int i=right-1; i>left; i--){
                     arr[top][i]=num;
                     num++;
