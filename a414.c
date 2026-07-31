@@ -3,8 +3,8 @@
 int main(void)
 {
     int a;
-    while(scanf("%d", &a) == 1){ //½T»{¬O§_¦³¸ê®Æ
-        if(a == 0){ //¤£³B²z0
+    while(scanf("%d", &a) == 1){ //ç¢ºèªæ˜¯å¦æœ‰è³‡æ–™
+        if(a == 0){ //ä¸è™•ç†0
             break;
         }
         int n=0;
