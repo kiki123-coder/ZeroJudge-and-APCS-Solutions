@@ -19,7 +19,7 @@ int main(void)
                 //A
                 if(test[j] == arr[j]){
                     A=A+1;
-                    used_arr[j]=1;  //¬ö¿ı¤w¨Ï¥Î¹Lªºarr¸òtest
+                    used_arr[j]=1;  //Â¬Ã¶Â¿Ã½Â¤wÂ¨ÃÂ¥ÃÂ¹LÂªÂºarrÂ¸Ã²test
                     used_test[j]=1;
 
                 }
