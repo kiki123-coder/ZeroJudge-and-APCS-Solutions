@@ -7,16 +7,16 @@ int main(void)
     char turn[10];
     scanf("%s", num);
 
-    int len=strlen(num);
-    int k=len-1;
+    int len = strlen(num);
+    int k = len - 1;
 
-    for(int i=0; i<len; i++){ //¤ÏÂà
-        turn[i]=num[k];
+    for(int i = 0; i < len; i++){ //åè½‰
+        turn[i] = num[k];
         k--;
     }
 
-    int j=0;
-    for(int i=0; i<len; i++){ //Á×§K¿é¥X«e¾É0
+    int j = 0;
+    for(int i = 0; i < len; i++){ //é¿å…è¼¸å‡ºå‰å°0
         if(turn[j] == '0'){
             j++;
         }
@@ -25,11 +25,11 @@ int main(void)
         }
     }
 
-    if(j==len){  //¥ş³¡¬°0ªºª¬ªp
+    if(j == len){  //å…¨éƒ¨ç‚º0çš„ç‹€æ³
         printf("0");
     }
     else{
-        for(; j<len; j++){
+        for(; j < len; j++){
             printf("%c", turn[j]);
         }
     }
