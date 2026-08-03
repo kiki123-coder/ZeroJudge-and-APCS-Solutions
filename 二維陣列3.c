@@ -5,36 +5,36 @@ int main(void)
     int N;
     scanf("%d", &N);
 
-    int top=0;
-    int bottom=N-1;
-    int left=0;
-    int right=N-1;
+    int top = 0;
+    int bottom = N - 1;
+    int left = 0;
+    int right = N - 1;
     int arr[100][100];
-    int num=1;
+    int num = 1;
 
-    while(top<=bottom && left<=right){
+    while(top <= bottom && left <= right){
 
-        //²Ä¤@¦C©¹¥k
-        for(int i=left; i<=right; i++){
-            arr[top][i]=num;
+        //ç¬¬ä¸€åˆ—å¾€å³
+        for(int i = left; i <= right; i++){
+            arr[top][i] = num;
             num++;
         }
 
-        //©¹¤U
-        for(int i=top+1; i<=bottom; i++){
-            arr[i][right]=num;
+        //å¾€ä¸‹
+        for(int i = top + 1; i <= bottom; i++){
+            arr[i][right] = num;
             num++;
         }
 
-        //©¹¥ª
-        for(int i=right-1; i>=left; i--){
-            arr[bottom][i]=num;
+        //å¾€å·¦
+        for(int i = right - 1; i >= left; i--){
+            arr[bottom][i] = num;
             num++;
         }
 
-        //©¹¤W
-        for(int i=bottom-1; i>top; i--){
-            arr[i][left]=num;
+        //å¾€ä¸Š
+        for(int i = bottom - 1; i > top; i--){
+            arr[i][left] = num;
             num++;
         }
         top++;
@@ -45,10 +45,12 @@ int main(void)
     }
 
 
-    for(int k=0; k<N; k++){
-        for(int j=0; j<N; j++){
+    for(int k = 0; k < N; k++){
+        
+        for(int j = 0; j < N; j++){
             printf("%d\t", arr[k][j]);
         }
+        
         printf("\n");
     }
     return 0;
