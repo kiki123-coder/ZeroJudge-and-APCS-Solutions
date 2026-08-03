@@ -7,7 +7,7 @@ int main(void)
     int a, b;
     scanf("%d %d", &a, &b);
 
-    int ans=max(a,b);
+    int ans = max(a, b);
 
     printf("%d", ans);
 
@@ -16,7 +16,7 @@ int main(void)
 
 int max(int a, int b)
 {
-    if(a>b){
+    if(a > b){
         return a;
     }
     else {
