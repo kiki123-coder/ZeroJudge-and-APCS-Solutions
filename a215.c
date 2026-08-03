@@ -6,13 +6,13 @@ int main(void)
 
     while(scanf("%lld %lld", &n, &m) != EOF){
 
-        long long sum=0, run=0;
+        long long sum = 0, run = 0;
 
-        for(long long i=n; ; i++){
-            sum+=i;
+        for(long long i = n; ; i++){
+            sum += i;
             run++;
 
-            if(sum>m)
+            if(sum > m)
                 break;
         }
 
