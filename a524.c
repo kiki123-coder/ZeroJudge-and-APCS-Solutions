@@ -15,14 +15,14 @@ void dfs(int step)
     }
     
     for(int i = n; i >= 1; i--){
+        
         if(used[i] == 0){
             used[i] = 1;
             arr[step] = i;
-
             dfs(step + 1);
-
             used[i] = 0;
         }
+        
     }
     return;
 
