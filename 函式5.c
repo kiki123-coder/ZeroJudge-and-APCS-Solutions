@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-char *numberTable[10] = {"Zero","One","Two","Three","Four",
-                         "Five","Six","Seven","Eight","Nine"};
+char *numberTable[10] = {"Zero", "One", "Two", "Three", "Four",
+                         "Five", "Six", "Seven", "Eight", "Nine"};
 void printNumber(int n);
 
 int main(void)
@@ -18,20 +18,20 @@ int main(void)
 void printNumber(int n)
 {
     int digit[20];
-    int i=0;
+    int i = 0;
 
-    if(n==0){
+    if(n == 0){
         printf("Zero");
         return;
     }
 
-    while(n>0){
-        digit[i]=n%10;
-        n=n/10;
+    while(n > 0){
+        digit[i] = n%10;
+        n = n / 10;
         i++;
     }
 
-    for(i=i-1;i>=0;i--){
+    for(i = i - 1; i >= 0; i--){
         printf("%s ", numberTable[digit[i]]);
     }
 }
