@@ -2,23 +2,23 @@
 int main(void)
 {
     int n, s;
-    while(scanf("%d",&n)!=EOF){
+    while(scanf("%d", &n) != EOF){
 
-        int sum=0;
+        int sum = 0;
         double avg;
-        for(int i=0;i<n;i++){
+        for(int i = 0; i < n; i++){
 
-            scanf("%d",&s);
-            sum=sum+s;
+            scanf("%d", &s);
+            sum = sum + s;
 
         }
 
-        avg=(double)sum/n;//Âà¯BÂI¼Æ¡AÁ×§K¤p¼Æ³¡¤ÀµLªk¶i¦æ¤ñ¸û
-        /*ÃD¥Ø­n¨Dªº¤À¼Æµû»ù¼Ð·Ç*/
-        if(avg>59){
+        avg = (double)sum / n;//è½‰æµ®é»žæ•¸ï¼Œé¿å…å°æ•¸éƒ¨åˆ†ç„¡æ³•é€²è¡Œæ¯”è¼ƒ
+        /*é¡Œç›®è¦æ±‚çš„åˆ†æ•¸è©•åƒ¹æ¨™æº–*/
+        if(avg > 59){
             printf("no\n");
         }
-        else if(avg<=59){
+        else if(avg <= 59){
             printf("yes\n");
         }
     }
