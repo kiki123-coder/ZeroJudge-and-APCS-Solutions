@@ -3,33 +3,33 @@
 int main(void)
 {
     int  n, m;
-    int none=1;
-    scanf("%d %d", &n, &m); //¿é¤J½d³ò
+    int none = 1;
+    scanf("%d %d", &n, &m); //è¼¸å…¥ç¯„åœ
 
-    for(int i=n; i<=m; i++){
-        int num=i, sum=0, len=1, power; //len¦¸¤è¦¸¼Æ power¦¸¤è«áªº¼Æ
+    for(int i = n; i <= m; i++){
+        int num = i, sum = 0, len = 1, power; //lenæ¬¡æ–¹æ¬¡æ•¸ poweræ¬¡æ–¹å¾Œçš„æ•¸
 
-        while(num>=10){
-            num=num/10;
+        while(num >= 10){
+            num = num / 10;
             len++;
         }
-        num=i;
+        num = i;
 
-        for(int j=0; j<len; j++){
-            int a=num % 10;
-            num=num / 10;
-            power=1;
+        for(int j = 0; j < len; j++){
+            int a = num%10;
+            num = num / 10;
+            power = 1;
 
-            for(int k=0; k<len; k++){
-                power=power*a;
+            for(int k = 0; k < len; k++){
+                power = power * a;
             }
 
-            sum=sum+power;
+            sum = sum + power;
         }
 
         if(sum == i){
             printf("%d ", i);
-            none=0;
+            none = 0;
         }
 
     }
