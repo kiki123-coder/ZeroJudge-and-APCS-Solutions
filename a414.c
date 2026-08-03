@@ -7,16 +7,16 @@ int main(void)
         if(a == 0){ //不處理0
             break;
         }
-        int n=0;
+        int n = 0;
 
         while(a != 0){
             if(a%2 == 1){
-                n=n+1;
+                n = n + 1;
             }
             else{
                 break;
             }
-            a=a/2;
+            a = a / 2;
         }
         printf("%d\n", n);
     }
