@@ -6,7 +6,7 @@ int main(void)
     int n;
     int target;
 
-    scanf("%d", &n); //¿é¤J¸ê®Æ
+    scanf("%d", &n); //è¼¸å…¥è³‡æ–™
 
     for(int i = 0; i < n; i++){
         scanf("%d", &arr[i]);
@@ -14,7 +14,7 @@ int main(void)
 
     scanf("%d", &target);
 
-    int left = 0; //³]©w½d³ò
+    int left = 0; //è¨­å®šç¯„åœ
     int right = n - 1;
     int mid;
 
