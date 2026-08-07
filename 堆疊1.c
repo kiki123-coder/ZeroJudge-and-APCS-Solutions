@@ -18,7 +18,7 @@ int pop(void)
 
 int main(void)
 {
-    int count, value; //count ¦³´X­Ó value ¥Ø«eÅª¨ìªº­È
+    int count, value; //count æœ‰å¹¾å€‹ value ç›®å‰è®€åˆ°çš„å€¼
     scanf("%d", &count);
 
     for(int i = 0; i < count; i++){
