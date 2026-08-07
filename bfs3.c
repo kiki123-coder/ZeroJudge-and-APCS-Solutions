@@ -14,7 +14,7 @@ int main(void)
 {
     int m;
 
-    scanf("%d %d", &n, &m); //n�O�`�I m�O���
+    scanf("%d %d", &n, &m); //n¬O¸`ÂI m¬OÃä¼Æ
 
     for(int i = 0; i < m; i++){
         int a, b;
@@ -61,7 +61,7 @@ void enqueue(int n)
 
 int dequeue(void)
 {
-    int n = queue[front];
+    int x = queue[front];
     front++;
-    return n;
+    return x;
 }
