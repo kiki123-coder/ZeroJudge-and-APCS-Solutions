@@ -12,9 +12,9 @@ void enqueue(int x)
 
 int dequeue(void)
 {
-    int x = queue[front];
+    int n = queue[front];
     front++;
-    return x;
+    return n;
 }
 
 int main(void)
