@@ -14,7 +14,7 @@ int main(void)
 {
     int m;
 
-    scanf("%d %d", &n, &m); //n¬O¸`ÂI m¬OÃä¼Æ
+    scanf("%d %d", &n, &m); //n是節點 m是邊數
 
     for(int i = 0; i < m; i++){
         int a, b;
