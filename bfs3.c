@@ -4,7 +4,7 @@ int queue[100];
 int front = 0;
 int rear = 0;
 int graph[100][100] = {0};
-int n;
+int k;
 
 void enqueue(int n);
 int dequeue(void);
@@ -14,7 +14,7 @@ int main(void)
 {
     int m;
 
-    scanf("%d %d", &n, &m); //n是節點 m是邊數
+    scanf("%d %d", &k, &m); //n是節點 m是邊數
 
     for(int i = 0; i < m; i++){
         int a, b;
@@ -42,7 +42,7 @@ void bfs(int start)
 
         printf("%d ", now);
 
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < k; i++){
 
             if(graph[now][i] == 1 && visited[i] == 0){
                 visited[i] = 1;
