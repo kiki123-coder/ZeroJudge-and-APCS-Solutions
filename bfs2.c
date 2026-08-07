@@ -41,7 +41,7 @@ void enqueue(int n)
 
 int dequeue(void)
 {
-    int n = queue[front];
+    int x = queue[front];
     front++;
-    return n;
+    return x;
 }
