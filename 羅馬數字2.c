@@ -2,8 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-/*��ռƦr�۴�*/
-
+/*兩組數字相減*/
 int main(void)
 {
     int romanTable[256]={0};
