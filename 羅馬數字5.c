@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*¼Æ¦rÂàÃ¹°¨¼Æ¦r*/
+/*æ•¸å­—è½‰ç¾…é¦¬æ•¸å­—ï¼Œæ–¹æ³•1*/
 
 int main(void)
 {
@@ -22,14 +22,14 @@ int main(void)
             n = n % a;
 
             if(i == 0){
-                // ¤d¦ì
+                // åƒä½
                 for(int j = 0; j < digit; j++){
                     printf("M");
                 }
             }
 
             else if(i == 1){
-                // ¦Ê¦ì
+                // ç™¾ä½
                 if(digit <= 3){
                     for(int j = 0; j < digit; j++){
                         printf("C");
@@ -54,7 +54,7 @@ int main(void)
             }
 
             else if(i == 2){
-                // ¤Q¦ì
+                // åä½
                 if(digit <= 3){
                     for(int j = 0; j < digit; j++){
                         printf("X");
@@ -79,7 +79,7 @@ int main(void)
             }
 
             else{
-                // ­Ó¦ì
+                // å€‹ä½
                 if(digit <= 3){
                     for(int j = 0; j < digit; j++){
                         printf("I");
