@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-/*�Ʀr�Kù���Ʀr�A�u���J���W���W�Ʀr*/
+/*數字變羅馬數字，只能輸入表上正規數字*/
 
 int main(void)
 {
