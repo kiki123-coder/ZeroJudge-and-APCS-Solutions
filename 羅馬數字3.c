@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-/*ÀÉ®×2¼W¥[¨ç¦¡*/
+/*æª”æ¡ˆ2å¢åŠ å‡½å¼*/
 
 int romanTable[256]={0};
 int romanToInt(char roman[]);
