@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-/*�Ʀr��ù���Ʀr*/
+/*數字轉羅馬數字，方法2*/
 
 int main(void)
 {
