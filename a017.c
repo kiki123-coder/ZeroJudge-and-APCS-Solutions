@@ -9,6 +9,8 @@ int sub(int a, int b);
 int mul(int a, int b);
 int div(int a, int b);
 int mod(int a, int b);
+int priority(char op);
+int calculate(int a, int b, char op);
 
 int main(void)
 {
@@ -28,92 +30,88 @@ int main(void)
                     num = num * 10 + str[i] - '0';
                 }
 
-                else {
-                    stack[top] = num;
-                    top++;
-                    num = 0;
+                else { //è™•ç†ç¬¦è™Ÿ
 
                     if(str[i] == '('){
                         opStack[opTop] = '(';
                         opTop++;
                     }
-                    else if(str[i] == ')'){ //³B²z¬A¸¹¸Ìªº¹Bºâ
+                    else if(str[i] == ')'){ //è™•ç†æ‹¬è™Ÿè£¡çš„é‹ç®—
 
-                        while(opStack[opTop - 1] != '('){
-
-                            if(opStack[opTop - 1] == '*' || opStack[opTop - 1] == '/' || opStack[opTop - 1] == '%'){
-                                if(opStack[opTop - 1] == '*'){
-                                    int b = stack[--top];
-                                    int a = stack[--top];
-
-                                    int ans = mul(a, b);
-
-                                    stack[top] = ans;
-                                    top++;
-                                    opTop--;
-                                }
-                                else if(opStack[opTop - 1] == '/'){
-                                    int b = stack[--top];
-                                    int a = stack[--top];
-
-                                    int ans = div(a, b);
-
-                                    stack[top] = ans;
-                                    top++;
-                                    opTop--;
-                                }
-                                else if(opStack[opTop - 1] == '%'){
-                                    int b = stack[--top];
-                                    int a = stack[--top];
-
-                                    int ans = mod(a, b);
-
-                                    stack[top] = ans;
-                                    top++;
-                                    opTop--;
-                                }
-                              }
-                            if(opStack[opTop - 1] == '+'){
-                                int b = stack[--top];
-                                int a = stack[--top];
-
-                                int ans = add(a, b);
-
-                                stack[top] = ans;
-                                top++;
-                                opTop--;
-                              }
-                              else if(opStack[opTop - 1] == '-'){
-                                int b = stack[--top];
-                                int a = stack[--top];
-
-                                int ans = sub(a, b);
-
-                                stack[top] = ans;
-                                top++;
-                                opTop--;
-                              }
-
+                        if(i >= 2 && str[i - 2] != ')'){ //é€²å…¥æ‹¬è™Ÿå‰çš„æ•¸å­—æ”¾å…¥stack
+                            stack[top] = num;
+                            top++;
+                            num = 0;
                         }
 
-                        opTop--;   // §â '(' ²¾±¼
+                        while(opStack[opTop - 1] != '('){ //é‹ç®—
+
+                            char op = opStack[opTop - 1];
+                            opTop--;
+
+                            int b = stack[top - 1];
+                            top--;
+
+                            int a = stack[top - 1];
+                            top--;
+
+                            stack[top] = calculate(a, b, op);
+                            top++;
+                        }
+
+                        opTop--;
                     }
+                    else{ //è™•ç†æ‹¬è™Ÿå¤–é‹ç®—
 
-                    //³B²z¬A¸¹¥~ªº¹Bºâ
-                    if(str[i] == '*' || str[i] == '/' || str[i] == '%'){
+                        if(i >= 2 && str[i - 2] != ')'){
+                            stack[top] = num;
+                            top++;
+                            num = 0;
+                        }
 
+                        while(opTop > 0 && opStack[opTop - 1] != '(' && priority(opStack[opTop - 1]) >= priority(str[i])){
+
+                            char op = opStack[opTop - 1];
+                            opTop--;
+
+                            int b = stack[top - 1];
+                            top--;
+
+                            int a = stack[top - 1];
+                            top--;
+
+                            stack[top] = calculate(a, b, op);
+                            top++;
+                        }
+
+                        opStack[opTop] = str[i];
+                        opTop++;
                     }
-
-
                 }
-
             }
-
         }
 
-        stack[top] = num; //³Ì«á¤@¦ì
-        top++;
+        if(strlen(str) >= 2 && str[strlen(str) - 2] != ')'){ //è™•ç†å„ªå…ˆæ¬Š
+            stack[top] = num;
+            top++;
+        }
 
+        while(opTop > 0){
+
+            char op = opStack[opTop - 1];
+            opTop--;
+
+            int b = stack[top - 1];
+            top--;
+
+            int a = stack[top - 1];
+            top--;
+
+            stack[top] = calculate(a, b, op);
+            top++;
+        }
+
+        printf("%d\n", stack[top - 1]);
     }
 }
 
@@ -140,4 +138,37 @@ int div(int a, int b)
 int mod(int a, int b)
 {
     return a%b;
+}
+
+int priority(char op)
+{
+    if(op == '+' || op == '-'){
+        return 1;
+    }
+    else if(op == '*' || op == '/' || op == '%'){
+        return 2;
+    }
+
+    return -1;
+}
+
+int calculate(int a, int b, char op)
+{
+    if(op == '+'){
+        return add(a, b);
+    }
+    else if(op == '-'){
+        return sub(a, b);
+    }
+    else if(op == '*'){
+        return mul(a, b);
+    }
+    else if(op == '/'){
+        return div(a, b);
+    }
+    else if(op == '%'){
+        return mod(a, b);
+    }
+
+    return 0;
 }
