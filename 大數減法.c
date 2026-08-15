@@ -24,7 +24,7 @@ int main(void)
             for(int i = lenA - 1; i >= 0; i--){
                 int a = (numA[i] - '0') - (numB[i] - '0') - b;
 
-                //­É¦ì
+                //å€Ÿä½
                 if(a < 0){
                     a = a + 10;
                     b = 1;
@@ -66,7 +66,7 @@ int main(void)
 
         int start = len - 1;
 
-        while(start > 0 && ans[start] == 0){ //¥h±¼µª®×«e­±ªº0
+        while(start > 0 && ans[start] == 0){ //å»æ‰ç­”æ¡ˆå‰é¢çš„0
             start--;
         }
 
