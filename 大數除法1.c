@@ -31,11 +31,11 @@ int main(void)
                 lenCurrent--;
             }
 
-            int q = 0; //°Ó
+            int q = 0; //å•†
 
             while(1){
 
-                if(lenCurrent < lenB){ //current ¤ñ°£¼Æµu¡A¤£¯à¦A´î
+                if(lenCurrent < lenB){ //current æ¯”é™¤æ•¸çŸ­ï¼Œä¸èƒ½å†æ¸›
                     break;
                 }
 
@@ -44,7 +44,7 @@ int main(void)
 
                     for(int j = 0; j < lenB; j++){
                         if(current[j] < numB[j] - '0'){
-                            smaller = 1; //current ¤ñ°£¼Æ¤p
+                            smaller = 1; //current æ¯”é™¤æ•¸å°
                             break;
                         }
 
@@ -62,11 +62,11 @@ int main(void)
 
                 for(int j = lenCurrent - 1; j >= 0; j--){
 
-                    int indexB = j - (lenCurrent - lenB); //Åı°£¼Æ©M current ¥k¹ï»ô
+                    int indexB = j - (lenCurrent - lenB); //è®“é™¤æ•¸å’Œ current å³å°é½Š
                     int b;
 
                     if(indexB < 0){
-                        b = 0; //¨S¦³¹ïÀ³¦ì¼Æ´N·í¦¨ 0
+                        b = 0; //æ²’æœ‰å°æ‡‰ä½æ•¸å°±ç•¶æˆ 0
                     }
                     else{
                         b = numB[indexB] - '0';
