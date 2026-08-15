@@ -24,7 +24,7 @@ int main(void)
             for(int i = lenA - 1; i >= 0; i--){
                 int a = numA[i] - '0' + numB[i] - '0' + b;
 
-                //∂i¶Ï
+                //ÈÄ≤‰Ωç
                 if(a < 10){
                     ans[k] = a;
                     b = 0;
@@ -94,7 +94,7 @@ int main(void)
             }
         }
 
-        if(b != 0){ //≥B≤z≥Ã∞™∂i¶Ï
+        if(b != 0){ //ËôïÁêÜÊúÄÈ´òÈÄ≤‰Ωç
             printf("%d", b);
         }
 
