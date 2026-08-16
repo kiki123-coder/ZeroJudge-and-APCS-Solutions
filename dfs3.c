@@ -24,12 +24,12 @@ void dfs(int x, int y)
     visited[x][y] = 1;
     printf("%d %d\n", x, y);
 
-    int dx[4] = {- 1, 0, + 1, 0}; //¤è¦V
+    int dx[4] = {- 1, 0, + 1, 0}; //æ–¹å‘
     int dy[4] = {0, - 1, 0, + 1};
 
     for(int i = 0; i < 4; i++){
 
-        int nx = x + dx[i]; //¤U¤@­Ó­n¥hªº®æ¤l
+        int nx = x + dx[i]; //ä¸‹ä¸€å€‹è¦å»çš„æ ¼å­
         int ny = y + dy[i];
 
         if(nx >= 0 && nx < n && ny >= 0 && ny < n){
