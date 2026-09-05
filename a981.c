@@ -5,7 +5,7 @@ int ans[31];
 int n, m;
 int found = 0;
 
-//±ÆÄò
+//æ’çºŒ
 void sort(void)
 {
     for(int i = 0; i < n - 1; i++){
