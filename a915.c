@@ -11,7 +11,7 @@ int main(void)
         scanf("%d %d", &x[i], &y[i]);
     }
 
-    // ±Æ§Ç
+    //æ’åº
     for(int i = 0; i < n - 1; i++){
         for(int j = 0; j < n - 1 - i; j++){
 
@@ -28,7 +28,7 @@ int main(void)
         }
     }
 
-    // ¿é¥X
+    //è¼¸å‡º
     for(int i = 0; i < n; i++){
         printf("%d %d\n", x[i], y[i]);
     }
