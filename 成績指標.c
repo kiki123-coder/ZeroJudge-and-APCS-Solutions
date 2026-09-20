@@ -49,7 +49,7 @@ void sort(int *a, int l)
 {
     int i, j;
     int v;
-    //¶}©l±Æ§Ç
+    //é–‹å§‹æ’åº
     for(i = 0; i < l - 1; i++){
         for(j = i + 1; j < l; j++){
             if(a[i] > a[j]){
