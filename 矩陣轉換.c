@@ -23,7 +23,7 @@ int main(void)
     for(int k = M - 1; k >= 0; k--){
 
         if(op[k] == 0){
-            // °f®Й°w±ЫВа
+            //йЂ†ж™‚й‡ќж—‹иЅ‰
             for(int i = 0; i < R; i++){
                 for(int j = 0; j < C; j++){
                     b[C - 1 - j][i] = a[i][j];
@@ -35,7 +35,7 @@ int main(void)
             C = t;
         }
         else{
-            // ¤W¤UВЅВа
+            //дёЉдё‹зї»иЅ‰
             for(int i = 0; i < R; i++){
                 for(int j = 0; j < C; j++){
                     b[R - 1 - i][j] = a[i][j];
