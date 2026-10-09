@@ -17,7 +17,7 @@ int main(void)
 
     scanf("%d", &b);
 
-    int base[4] = {0};  // 0¥»ÂS¡B1¤@ÂS¡B2¤GÂS¡B3¤TÂS
+    int base[4] = {0};  // 0æœ¬å£˜ã€1ä¸€å£˜ã€2äºŒå£˜ã€3ä¸‰å£˜
     int out = 0;
     int score = 0;
     int player = 0;
